@@ -12,8 +12,8 @@ while cap.isOpened():
 	gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
 
 	cv.imshow('frame', gray)
-	if cv.waitKey(1) == ord('q'):
+	if cv.waitKey(2) == ord('q'):
 		break
 
 cap.release()
-cv.destroyAllWindows()
+cv.destroyAllWindows() 
