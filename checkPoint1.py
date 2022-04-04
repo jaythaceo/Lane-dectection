@@ -1,19 +1,8 @@
 import cv2 as cv
 import numpy as np
+import matplotlib.pyplot as plt
 
-cap  = cv.VideoCapture("input.mp4")
-
-while cap.isOpened():
-	ret, frame = cap.read()
-	if not ret:
-		print("Cannot receive frame")
-		break
-
-	gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
-
-	cv.imshow('frame', gray)
-	if cv.waitKey(2) == ord('q'):
-		break
-
-cap.release()
-cv.destroyAllWindows() 
+months = ["Jan","Feb","Mar","Apl","May","Jun"]
+if len(months) > 7:
+    print("we have 6 months here damnit!!")
+print(months)
